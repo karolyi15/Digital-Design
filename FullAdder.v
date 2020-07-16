@@ -6,35 +6,36 @@ module full_adder_TB;
     full_adder test_adder(i_bitA0,i_bitA1,i_bitB0,i_bitB1,i_carry,o_sum0,o_sum1,o_carry);
 
     initial begin
-        
+        $monitor("[$monitor] time=%0t bitA0=%b bitA1=%b bitB0=%b bitB1=%b carry_in=%b carry_out=%b sum0_bit=%b sum1_bit=%b",$time,i_bitA0,i_bitA1,i_bitB0,i_bitB1,i_carry,o_carry,o_sum0,o_sum1);
+
         $dumpfile("adder_tb.dump"); // create the dump file
 		$dumpvars(0,full_adder_TB); // dump the variables into the file
-        
+        #12 
         //Without Carry
         i_bitA0=1; i_bitA1=0; i_bitB0=0; i_bitB1=1; i_carry=0;
-		#100 $display("bitA0=%b, bitA1=%b,bitB0=%b, bitB1=%b, carry_in=%b,carry_out=%b, sum0_bit=%b,sum1_bit=%b",i_bitA0,i_bitA1,i_bitB0,i_bitB1,i_carry,o_carry,o_sum0,o_sum1);
-
+		//#12 $display("bitA0=%b, bitA1=%b,bitB0=%b, bitB1=%b, carry_in=%b,carry_out=%b, sum0_bit=%b,sum1_bit=%b",i_bitA0,i_bitA1,i_bitB0,i_bitB1,i_carry,o_carry,o_sum0,o_sum1);
+        #12 
         i_bitA0=0; i_bitA1=1; i_bitB0=0; i_bitB1=1; i_carry=0;
-        #100 $display("bitA0=%b, bitA1=%b,bitB0=%b, bitB1=%b, carry_in=%b,carry_out=%b, sum0_bit=%b,sum1_bit=%b",i_bitA0,i_bitA1,i_bitB0,i_bitB1,i_carry,o_carry,o_sum0,o_sum1);
-        
+        //#12 $display("bitA0=%b, bitA1=%b,bitB0=%b, bitB1=%b, carry_in=%b,carry_out=%b, sum0_bit=%b,sum1_bit=%b",i_bitA0,i_bitA1,i_bitB0,i_bitB1,i_carry,o_carry,o_sum0,o_sum1);
+        #12 
         i_bitA0=1; i_bitA1=1; i_bitB0=0; i_bitB1=1; i_carry=0;
-        #100 $display("bitA0=%b, bitA1=%b,bitB0=%b, bitB1=%b, carry_in=%b,carry_out=%b, sum0_bit=%b,sum1_bit=%b",i_bitA0,i_bitA1,i_bitB0,i_bitB1,i_carry,o_carry,o_sum0,o_sum1);
-        
+        //#12 $display("bitA0=%b, bitA1=%b,bitB0=%b, bitB1=%b, carry_in=%b,carry_out=%b, sum0_bit=%b,sum1_bit=%b",i_bitA0,i_bitA1,i_bitB0,i_bitB1,i_carry,o_carry,o_sum0,o_sum1);
+        #12 
         i_bitA0=1; i_bitA1=1; i_bitB0=1; i_bitB1=1; i_carry=0;
-        #100 $display("bitA0=%b, bitA1=%b,bitB0=%b, bitB1=%b, carry_in=%b,carry_out=%b, sum0_bit=%b,sum1_bit=%b",i_bitA0,i_bitA1,i_bitB0,i_bitB1,i_carry,o_carry,o_sum0,o_sum1);
-
+        //#12 $display("bitA0=%b, bitA1=%b,bitB0=%b, bitB1=%b, carry_in=%b,carry_out=%b, sum0_bit=%b,sum1_bit=%b",i_bitA0,i_bitA1,i_bitB0,i_bitB1,i_carry,o_carry,o_sum0,o_sum1);
+        #12 
         //With Carry
         i_bitA0=1; i_bitA1=0; i_bitB0=0; i_bitB1=1; i_carry=1;
-		#100 $display("bitA0=%b, bitA1=%b,bitB0=%b, bitB1=%b, carry_in=%b,carry_out=%b, sum0_bit=%b,sum1_bit=%b",i_bitA0,i_bitA1,i_bitB0,i_bitB1,i_carry,o_carry,o_sum0,o_sum1);
-
+		//#12 $display("bitA0=%b, bitA1=%b,bitB0=%b, bitB1=%b, carry_in=%b,carry_out=%b, sum0_bit=%b,sum1_bit=%b",i_bitA0,i_bitA1,i_bitB0,i_bitB1,i_carry,o_carry,o_sum0,o_sum1);
+        #12 
         i_bitA0=0; i_bitA1=1; i_bitB0=0; i_bitB1=1; i_carry=1;
-        #100 $display("bitA0=%b, bitA1=%b,bitB0=%b, bitB1=%b, carry_in=%b,carry_out=%b, sum0_bit=%b,sum1_bit=%b",i_bitA0,i_bitA1,i_bitB0,i_bitB1,i_carry,o_carry,o_sum0,o_sum1);
-        
+        //#12 $display("bitA0=%b, bitA1=%b,bitB0=%b, bitB1=%b, carry_in=%b,carry_out=%b, sum0_bit=%b,sum1_bit=%b",i_bitA0,i_bitA1,i_bitB0,i_bitB1,i_carry,o_carry,o_sum0,o_sum1);
+        #12 
         i_bitA0=1; i_bitA1=1; i_bitB0=0; i_bitB1=1; i_carry=1;
-        #100 $display("bitA0=%b, bitA1=%b,bitB0=%b, bitB1=%b, carry_in=%b,carry_out=%b, sum0_bit=%b,sum1_bit=%b",i_bitA0,i_bitA1,i_bitB0,i_bitB1,i_carry,o_carry,o_sum0,o_sum1);
-        
+        //#12 $display("bitA0=%b, bitA1=%b,bitB0=%b, bitB1=%b, carry_in=%b,carry_out=%b, sum0_bit=%b,sum1_bit=%b",i_bitA0,i_bitA1,i_bitB0,i_bitB1,i_carry,o_carry,o_sum0,o_sum1);
+        #12 
         i_bitA0=1; i_bitA1=1; i_bitB0=1; i_bitB1=1; i_carry=1;
-        #100 $display("bitA0=%b, bitA1=%b,bitB0=%b, bitB1=%b, carry_in=%b,carry_out=%b, sum0_bit=%b,sum1_bit=%b",i_bitA0,i_bitA1,i_bitB0,i_bitB1,i_carry,o_carry,o_sum0,o_sum1);
+        //#12 $display("bitA0=%b, bitA1=%b,bitB0=%b, bitB1=%b, carry_in=%b,carry_out=%b, sum0_bit=%b,sum1_bit=%b",i_bitA0,i_bitA1,i_bitB0,i_bitB1,i_carry,o_carry,o_sum0,o_sum1);
     end 
 
 endmodule        

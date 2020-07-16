@@ -6,17 +6,17 @@
 :vpi_module "vhdl_sys";
 :vpi_module "v2005_math";
 :vpi_module "va_math";
-S_0x5652b5b3d030 .scope module, "full_adder_TB" "full_adder_TB" 2 2;
+S_0x55c72f0b0030 .scope module, "full_adder_TB" "full_adder_TB" 2 2;
  .timescale 0 0;
-v0x5652b5b9eb40_0 .var "i_bitA0", 0 0;
-v0x5652b5b9ec00_0 .var "i_bitA1", 0 0;
-v0x5652b5b9eca0_0 .var "i_bitB0", 0 0;
-v0x5652b5b9ed40_0 .var "i_bitB1", 0 0;
-v0x5652b5b9ede0_0 .var "i_carry", 0 0;
-v0x5652b5b9ee80_0 .net "o_carry", 0 0, L_0x5652b5b9fd70;  1 drivers
-v0x5652b5b9ef50_0 .net "o_sum0", 0 0, L_0x5652b5b9f990;  1 drivers
-v0x5652b5b9f020_0 .net "o_sum1", 0 0, L_0x5652b5b9fb90;  1 drivers
-S_0x5652b5b3d1b0 .scope module, "test_adder" "full_adder" 2 6, 2 42 0, S_0x5652b5b3d030;
+v0x55c72f109390_0 .var "i_bitA0", 0 0;
+v0x55c72f109450_0 .var "i_bitA1", 0 0;
+v0x55c72f1094f0_0 .var "i_bitB0", 0 0;
+v0x55c72f109590_0 .var "i_bitB1", 0 0;
+v0x55c72f109630_0 .var "i_carry", 0 0;
+v0x55c72f1096d0_0 .net "o_carry", 0 0, L_0x55c72f10a630;  1 drivers
+v0x55c72f1097a0_0 .net "o_sum0", 0 0, L_0x55c72f10a250;  1 drivers
+v0x55c72f109870_0 .net "o_sum1", 0 0, L_0x55c72f10a450;  1 drivers
+S_0x55c72f0b01b0 .scope module, "test_adder" "full_adder" 2 6, 2 43 0, S_0x55c72f0b0030;
  .timescale 0 0;
     .port_info 0 /INPUT 1 "i_bitA0"
     .port_info 1 /INPUT 1 "i_bitA1"
@@ -26,143 +26,136 @@ S_0x5652b5b3d1b0 .scope module, "test_adder" "full_adder" 2 6, 2 42 0, S_0x5652b
     .port_info 5 /OUTPUT 1 "o_sum0"
     .port_info 6 /OUTPUT 1 "o_sum1"
     .port_info 7 /OUTPUT 1 "o_carry"
-L_0x5652b5b66610 .functor XOR 1, v0x5652b5b9ed40_0, v0x5652b5b9ede0_0, C4<0>, C4<0>;
-L_0x5652b5b66890 .functor XOR 1, v0x5652b5b9eb40_0, v0x5652b5b9eca0_0, C4<0>, C4<0>;
-L_0x5652b5b66900 .functor OR 1, v0x5652b5b9ed40_0, v0x5652b5b9ede0_0, C4<0>, C4<0>;
-L_0x5652b5b9f260 .functor AND 1, L_0x5652b5b66900, v0x5652b5b9ec00_0, C4<1>, C4<1>;
-L_0x5652b5b9f3a0 .functor AND 1, v0x5652b5b9ed40_0, v0x5652b5b9ede0_0, C4<1>, C4<1>;
-L_0x5652b5b9f410 .functor OR 1, L_0x5652b5b9f260, L_0x5652b5b9f3a0, C4<0>, C4<0>;
-L_0x5652b5b9f4c0 .functor OR 1, v0x5652b5b9eb40_0, v0x5652b5b9eca0_0, C4<0>, C4<0>;
-L_0x5652b5b9f530 .functor OR 1, v0x5652b5b9ec00_0, v0x5652b5b9ed40_0, C4<0>, C4<0>;
-L_0x5652b5b9f5f0 .functor AND 1, L_0x5652b5b9f530, v0x5652b5b9ede0_0, C4<1>, C4<1>;
-L_0x5652b5b9f6b0 .functor AND 1, v0x5652b5b9ec00_0, v0x5652b5b9ed40_0, C4<1>, C4<1>;
-L_0x5652b5b9f810 .functor OR 1, L_0x5652b5b9f5f0, L_0x5652b5b9f6b0, C4<0>, C4<0>;
-L_0x5652b5b9f880 .functor AND 1, L_0x5652b5b9f4c0, L_0x5652b5b9f810, C4<1>, C4<1>;
-L_0x5652b5b9fa00 .functor AND 1, v0x5652b5b9eb40_0, v0x5652b5b9eca0_0, C4<1>, C4<1>;
-L_0x5652b5b9fb90 .functor XOR 1, L_0x5652b5b66610, v0x5652b5b9ec00_0, C4<0>, C4<0>;
-L_0x5652b5b9f990 .functor XOR 1, L_0x5652b5b66890, L_0x5652b5b9f410, C4<0>, C4<0>;
-L_0x5652b5b9fd70 .functor OR 1, L_0x5652b5b9f880, L_0x5652b5b9fa00, C4<0>, C4<0>;
-v0x5652b5b66a70_0 .net "i_bitA0", 0 0, v0x5652b5b9eb40_0;  1 drivers
-v0x5652b5b66b10_0 .net "i_bitA1", 0 0, v0x5652b5b9ec00_0;  1 drivers
-v0x5652b5b9dbd0_0 .net "i_bitB0", 0 0, v0x5652b5b9eca0_0;  1 drivers
-v0x5652b5b9dc70_0 .net "i_bitB1", 0 0, v0x5652b5b9ed40_0;  1 drivers
-v0x5652b5b9dd30_0 .net "i_carry", 0 0, v0x5652b5b9ede0_0;  1 drivers
-v0x5652b5b9de40_0 .net "o_carry", 0 0, L_0x5652b5b9fd70;  alias, 1 drivers
-v0x5652b5b9df00_0 .net "o_sum0", 0 0, L_0x5652b5b9f990;  alias, 1 drivers
-v0x5652b5b9dfc0_0 .net "o_sum1", 0 0, L_0x5652b5b9fb90;  alias, 1 drivers
-v0x5652b5b9e080_0 .net "w_WIRE_0", 0 0, L_0x5652b5b66610;  1 drivers
-v0x5652b5b9e140_0 .net "w_WIRE_1", 0 0, L_0x5652b5b66890;  1 drivers
-v0x5652b5b9e200_0 .net "w_WIRE_10", 0 0, L_0x5652b5b9f810;  1 drivers
-v0x5652b5b9e2c0_0 .net "w_WIRE_11", 0 0, L_0x5652b5b9f880;  1 drivers
-v0x5652b5b9e380_0 .net "w_WIRE_12", 0 0, L_0x5652b5b9fa00;  1 drivers
-v0x5652b5b9e440_0 .net "w_WIRE_2", 0 0, L_0x5652b5b66900;  1 drivers
-v0x5652b5b9e500_0 .net "w_WIRE_3", 0 0, L_0x5652b5b9f260;  1 drivers
-v0x5652b5b9e5c0_0 .net "w_WIRE_4", 0 0, L_0x5652b5b9f3a0;  1 drivers
-v0x5652b5b9e680_0 .net "w_WIRE_5", 0 0, L_0x5652b5b9f410;  1 drivers
-v0x5652b5b9e740_0 .net "w_WIRE_6", 0 0, L_0x5652b5b9f4c0;  1 drivers
-v0x5652b5b9e800_0 .net "w_WIRE_7", 0 0, L_0x5652b5b9f530;  1 drivers
-v0x5652b5b9e8c0_0 .net "w_WIRE_8", 0 0, L_0x5652b5b9f5f0;  1 drivers
-v0x5652b5b9e980_0 .net "w_WIRE_9", 0 0, L_0x5652b5b9f6b0;  1 drivers
-    .scope S_0x5652b5b3d030;
+L_0x55c72f0d8c10 .functor XOR 1, v0x55c72f109590_0, v0x55c72f109630_0, C4<0>, C4<0>;
+L_0x55c72f0d8c80 .functor XOR 1, v0x55c72f109390_0, v0x55c72f1094f0_0, C4<0>, C4<0>;
+L_0x55c72f109ab0 .functor OR 1, v0x55c72f109590_0, v0x55c72f109630_0, C4<0>, C4<0>;
+L_0x55c72f109b20 .functor AND 1, L_0x55c72f109ab0, v0x55c72f109450_0, C4<1>, C4<1>;
+L_0x55c72f109c60 .functor AND 1, v0x55c72f109590_0, v0x55c72f109630_0, C4<1>, C4<1>;
+L_0x55c72f109cd0 .functor OR 1, L_0x55c72f109b20, L_0x55c72f109c60, C4<0>, C4<0>;
+L_0x55c72f109d80 .functor OR 1, v0x55c72f109390_0, v0x55c72f1094f0_0, C4<0>, C4<0>;
+L_0x55c72f109df0 .functor OR 1, v0x55c72f109450_0, v0x55c72f109590_0, C4<0>, C4<0>;
+L_0x55c72f109eb0 .functor AND 1, L_0x55c72f109df0, v0x55c72f109630_0, C4<1>, C4<1>;
+L_0x55c72f109f70 .functor AND 1, v0x55c72f109450_0, v0x55c72f109590_0, C4<1>, C4<1>;
+L_0x55c72f10a0d0 .functor OR 1, L_0x55c72f109eb0, L_0x55c72f109f70, C4<0>, C4<0>;
+L_0x55c72f10a140 .functor AND 1, L_0x55c72f109d80, L_0x55c72f10a0d0, C4<1>, C4<1>;
+L_0x55c72f10a2c0 .functor AND 1, v0x55c72f109390_0, v0x55c72f1094f0_0, C4<1>, C4<1>;
+L_0x55c72f10a450 .functor XOR 1, L_0x55c72f0d8c10, v0x55c72f109450_0, C4<0>, C4<0>;
+L_0x55c72f10a250 .functor XOR 1, L_0x55c72f0d8c80, L_0x55c72f109cd0, C4<0>, C4<0>;
+L_0x55c72f10a630 .functor OR 1, L_0x55c72f10a140, L_0x55c72f10a2c0, C4<0>, C4<0>;
+v0x55c72f0d8e80_0 .net "i_bitA0", 0 0, v0x55c72f109390_0;  1 drivers
+v0x55c72f0d8f20_0 .net "i_bitA1", 0 0, v0x55c72f109450_0;  1 drivers
+v0x55c72f108420_0 .net "i_bitB0", 0 0, v0x55c72f1094f0_0;  1 drivers
+v0x55c72f1084c0_0 .net "i_bitB1", 0 0, v0x55c72f109590_0;  1 drivers
+v0x55c72f108580_0 .net "i_carry", 0 0, v0x55c72f109630_0;  1 drivers
+v0x55c72f108690_0 .net "o_carry", 0 0, L_0x55c72f10a630;  alias, 1 drivers
+v0x55c72f108750_0 .net "o_sum0", 0 0, L_0x55c72f10a250;  alias, 1 drivers
+v0x55c72f108810_0 .net "o_sum1", 0 0, L_0x55c72f10a450;  alias, 1 drivers
+v0x55c72f1088d0_0 .net "w_WIRE_0", 0 0, L_0x55c72f0d8c10;  1 drivers
+v0x55c72f108990_0 .net "w_WIRE_1", 0 0, L_0x55c72f0d8c80;  1 drivers
+v0x55c72f108a50_0 .net "w_WIRE_10", 0 0, L_0x55c72f10a0d0;  1 drivers
+v0x55c72f108b10_0 .net "w_WIRE_11", 0 0, L_0x55c72f10a140;  1 drivers
+v0x55c72f108bd0_0 .net "w_WIRE_12", 0 0, L_0x55c72f10a2c0;  1 drivers
+v0x55c72f108c90_0 .net "w_WIRE_2", 0 0, L_0x55c72f109ab0;  1 drivers
+v0x55c72f108d50_0 .net "w_WIRE_3", 0 0, L_0x55c72f109b20;  1 drivers
+v0x55c72f108e10_0 .net "w_WIRE_4", 0 0, L_0x55c72f109c60;  1 drivers
+v0x55c72f108ed0_0 .net "w_WIRE_5", 0 0, L_0x55c72f109cd0;  1 drivers
+v0x55c72f108f90_0 .net "w_WIRE_6", 0 0, L_0x55c72f109d80;  1 drivers
+v0x55c72f109050_0 .net "w_WIRE_7", 0 0, L_0x55c72f109df0;  1 drivers
+v0x55c72f109110_0 .net "w_WIRE_8", 0 0, L_0x55c72f109eb0;  1 drivers
+v0x55c72f1091d0_0 .net "w_WIRE_9", 0 0, L_0x55c72f109f70;  1 drivers
+    .scope S_0x55c72f0b0030;
 T_0 ;
-    %vpi_call 2 10 "$dumpfile", "adder_tb.dump" {0 0 0};
-    %vpi_call 2 11 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x5652b5b3d030 {0 0 0};
+    %vpi_call 2 9 "$monitor", "[$monitor] time=%0t bitA0=%b bitA1=%b bitB0=%b bitB1=%b carry_in=%b carry_out=%b sum0_bit=%b sum1_bit=%b", $time, v0x55c72f109390_0, v0x55c72f109450_0, v0x55c72f1094f0_0, v0x55c72f109590_0, v0x55c72f109630_0, v0x55c72f1096d0_0, v0x55c72f1097a0_0, v0x55c72f109870_0 {0 0 0};
+    %vpi_call 2 11 "$dumpfile", "adder_tb.dump" {0 0 0};
+    %vpi_call 2 12 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x55c72f0b0030 {0 0 0};
+    %delay 12, 0;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x5652b5b9eb40_0, 0, 1;
+    %store/vec4 v0x55c72f109390_0, 0, 1;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x5652b5b9ec00_0, 0, 1;
+    %store/vec4 v0x55c72f109450_0, 0, 1;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x5652b5b9eca0_0, 0, 1;
+    %store/vec4 v0x55c72f1094f0_0, 0, 1;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x5652b5b9ed40_0, 0, 1;
+    %store/vec4 v0x55c72f109590_0, 0, 1;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x5652b5b9ede0_0, 0, 1;
-    %delay 100, 0;
-    %vpi_call 2 15 "$display", "bitA0=%b, bitA1=%b,bitB0=%b, bitB1=%b, carry_in=%b,carry_out=%b, sum0_bit=%b,sum1_bit=%b", v0x5652b5b9eb40_0, v0x5652b5b9ec00_0, v0x5652b5b9eca0_0, v0x5652b5b9ed40_0, v0x5652b5b9ede0_0, v0x5652b5b9ee80_0, v0x5652b5b9ef50_0, v0x5652b5b9f020_0 {0 0 0};
+    %store/vec4 v0x55c72f109630_0, 0, 1;
+    %delay 12, 0;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x5652b5b9eb40_0, 0, 1;
+    %store/vec4 v0x55c72f109390_0, 0, 1;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x5652b5b9ec00_0, 0, 1;
+    %store/vec4 v0x55c72f109450_0, 0, 1;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x5652b5b9eca0_0, 0, 1;
+    %store/vec4 v0x55c72f1094f0_0, 0, 1;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x5652b5b9ed40_0, 0, 1;
+    %store/vec4 v0x55c72f109590_0, 0, 1;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x5652b5b9ede0_0, 0, 1;
-    %delay 100, 0;
-    %vpi_call 2 18 "$display", "bitA0=%b, bitA1=%b,bitB0=%b, bitB1=%b, carry_in=%b,carry_out=%b, sum0_bit=%b,sum1_bit=%b", v0x5652b5b9eb40_0, v0x5652b5b9ec00_0, v0x5652b5b9eca0_0, v0x5652b5b9ed40_0, v0x5652b5b9ede0_0, v0x5652b5b9ee80_0, v0x5652b5b9ef50_0, v0x5652b5b9f020_0 {0 0 0};
+    %store/vec4 v0x55c72f109630_0, 0, 1;
+    %delay 12, 0;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x5652b5b9eb40_0, 0, 1;
+    %store/vec4 v0x55c72f109390_0, 0, 1;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x5652b5b9ec00_0, 0, 1;
+    %store/vec4 v0x55c72f109450_0, 0, 1;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x5652b5b9eca0_0, 0, 1;
+    %store/vec4 v0x55c72f1094f0_0, 0, 1;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x5652b5b9ed40_0, 0, 1;
+    %store/vec4 v0x55c72f109590_0, 0, 1;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x5652b5b9ede0_0, 0, 1;
-    %delay 100, 0;
-    %vpi_call 2 21 "$display", "bitA0=%b, bitA1=%b,bitB0=%b, bitB1=%b, carry_in=%b,carry_out=%b, sum0_bit=%b,sum1_bit=%b", v0x5652b5b9eb40_0, v0x5652b5b9ec00_0, v0x5652b5b9eca0_0, v0x5652b5b9ed40_0, v0x5652b5b9ede0_0, v0x5652b5b9ee80_0, v0x5652b5b9ef50_0, v0x5652b5b9f020_0 {0 0 0};
+    %store/vec4 v0x55c72f109630_0, 0, 1;
+    %delay 12, 0;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x5652b5b9eb40_0, 0, 1;
+    %store/vec4 v0x55c72f109390_0, 0, 1;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x5652b5b9ec00_0, 0, 1;
+    %store/vec4 v0x55c72f109450_0, 0, 1;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x5652b5b9eca0_0, 0, 1;
+    %store/vec4 v0x55c72f1094f0_0, 0, 1;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x5652b5b9ed40_0, 0, 1;
+    %store/vec4 v0x55c72f109590_0, 0, 1;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x5652b5b9ede0_0, 0, 1;
-    %delay 100, 0;
-    %vpi_call 2 24 "$display", "bitA0=%b, bitA1=%b,bitB0=%b, bitB1=%b, carry_in=%b,carry_out=%b, sum0_bit=%b,sum1_bit=%b", v0x5652b5b9eb40_0, v0x5652b5b9ec00_0, v0x5652b5b9eca0_0, v0x5652b5b9ed40_0, v0x5652b5b9ede0_0, v0x5652b5b9ee80_0, v0x5652b5b9ef50_0, v0x5652b5b9f020_0 {0 0 0};
+    %store/vec4 v0x55c72f109630_0, 0, 1;
+    %delay 12, 0;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x5652b5b9eb40_0, 0, 1;
+    %store/vec4 v0x55c72f109390_0, 0, 1;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x5652b5b9ec00_0, 0, 1;
+    %store/vec4 v0x55c72f109450_0, 0, 1;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x5652b5b9eca0_0, 0, 1;
+    %store/vec4 v0x55c72f1094f0_0, 0, 1;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x5652b5b9ed40_0, 0, 1;
+    %store/vec4 v0x55c72f109590_0, 0, 1;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x5652b5b9ede0_0, 0, 1;
-    %delay 100, 0;
-    %vpi_call 2 28 "$display", "bitA0=%b, bitA1=%b,bitB0=%b, bitB1=%b, carry_in=%b,carry_out=%b, sum0_bit=%b,sum1_bit=%b", v0x5652b5b9eb40_0, v0x5652b5b9ec00_0, v0x5652b5b9eca0_0, v0x5652b5b9ed40_0, v0x5652b5b9ede0_0, v0x5652b5b9ee80_0, v0x5652b5b9ef50_0, v0x5652b5b9f020_0 {0 0 0};
+    %store/vec4 v0x55c72f109630_0, 0, 1;
+    %delay 12, 0;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x5652b5b9eb40_0, 0, 1;
+    %store/vec4 v0x55c72f109390_0, 0, 1;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x5652b5b9ec00_0, 0, 1;
+    %store/vec4 v0x55c72f109450_0, 0, 1;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x5652b5b9eca0_0, 0, 1;
+    %store/vec4 v0x55c72f1094f0_0, 0, 1;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x5652b5b9ed40_0, 0, 1;
+    %store/vec4 v0x55c72f109590_0, 0, 1;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x5652b5b9ede0_0, 0, 1;
-    %delay 100, 0;
-    %vpi_call 2 31 "$display", "bitA0=%b, bitA1=%b,bitB0=%b, bitB1=%b, carry_in=%b,carry_out=%b, sum0_bit=%b,sum1_bit=%b", v0x5652b5b9eb40_0, v0x5652b5b9ec00_0, v0x5652b5b9eca0_0, v0x5652b5b9ed40_0, v0x5652b5b9ede0_0, v0x5652b5b9ee80_0, v0x5652b5b9ef50_0, v0x5652b5b9f020_0 {0 0 0};
+    %store/vec4 v0x55c72f109630_0, 0, 1;
+    %delay 12, 0;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x5652b5b9eb40_0, 0, 1;
+    %store/vec4 v0x55c72f109390_0, 0, 1;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x5652b5b9ec00_0, 0, 1;
+    %store/vec4 v0x55c72f109450_0, 0, 1;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x5652b5b9eca0_0, 0, 1;
+    %store/vec4 v0x55c72f1094f0_0, 0, 1;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x5652b5b9ed40_0, 0, 1;
+    %store/vec4 v0x55c72f109590_0, 0, 1;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x5652b5b9ede0_0, 0, 1;
-    %delay 100, 0;
-    %vpi_call 2 34 "$display", "bitA0=%b, bitA1=%b,bitB0=%b, bitB1=%b, carry_in=%b,carry_out=%b, sum0_bit=%b,sum1_bit=%b", v0x5652b5b9eb40_0, v0x5652b5b9ec00_0, v0x5652b5b9eca0_0, v0x5652b5b9ed40_0, v0x5652b5b9ede0_0, v0x5652b5b9ee80_0, v0x5652b5b9ef50_0, v0x5652b5b9f020_0 {0 0 0};
+    %store/vec4 v0x55c72f109630_0, 0, 1;
+    %delay 12, 0;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x5652b5b9eb40_0, 0, 1;
+    %store/vec4 v0x55c72f109390_0, 0, 1;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x5652b5b9ec00_0, 0, 1;
+    %store/vec4 v0x55c72f109450_0, 0, 1;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x5652b5b9eca0_0, 0, 1;
+    %store/vec4 v0x55c72f1094f0_0, 0, 1;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x5652b5b9ed40_0, 0, 1;
+    %store/vec4 v0x55c72f109590_0, 0, 1;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x5652b5b9ede0_0, 0, 1;
-    %delay 100, 0;
-    %vpi_call 2 37 "$display", "bitA0=%b, bitA1=%b,bitB0=%b, bitB1=%b, carry_in=%b,carry_out=%b, sum0_bit=%b,sum1_bit=%b", v0x5652b5b9eb40_0, v0x5652b5b9ec00_0, v0x5652b5b9eca0_0, v0x5652b5b9ed40_0, v0x5652b5b9ede0_0, v0x5652b5b9ee80_0, v0x5652b5b9ef50_0, v0x5652b5b9f020_0 {0 0 0};
+    %store/vec4 v0x55c72f109630_0, 0, 1;
     %end;
     .thread T_0;
 # The file index is used to find the file name in the following table.
