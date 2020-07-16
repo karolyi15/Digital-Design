@@ -1,5 +1,5 @@
 $date
-	Wed Jul 15 18:57:52 2020
+	Wed Jul 15 20:26:44 2020
 $end
 $version
 	Icarus Verilog
@@ -8,42 +8,36 @@ $timescale
 	1s
 $end
 $scope module full_adder_TB $end
-$var wire 1 ! o_sum1 $end
-$var wire 1 " o_sum0 $end
-$var wire 1 # o_carry $end
-$var reg 1 $ i_bitA0 $end
-$var reg 1 % i_bitA1 $end
-$var reg 1 & i_bitB0 $end
-$var reg 1 ' i_bitB1 $end
-$var reg 1 ( i_carry $end
+$var wire 2 ! o_sum [1:0] $end
+$var wire 1 " o_carry $end
+$var reg 2 # i_a [1:0] $end
+$var reg 2 $ i_b [1:0] $end
+$var reg 1 % i_carry $end
 $scope module test_adder $end
-$var wire 1 $ i_bitA0 $end
-$var wire 1 % i_bitA1 $end
-$var wire 1 & i_bitB0 $end
-$var wire 1 ' i_bitB1 $end
-$var wire 1 ( i_carry $end
-$var wire 1 # o_carry $end
-$var wire 1 " o_sum0 $end
-$var wire 1 ! o_sum1 $end
-$var wire 1 ) w_WIRE_0 $end
-$var wire 1 * w_WIRE_1 $end
-$var wire 1 + w_WIRE_10 $end
-$var wire 1 , w_WIRE_11 $end
-$var wire 1 - w_WIRE_12 $end
-$var wire 1 . w_WIRE_2 $end
-$var wire 1 / w_WIRE_3 $end
-$var wire 1 0 w_WIRE_4 $end
-$var wire 1 1 w_WIRE_5 $end
-$var wire 1 2 w_WIRE_6 $end
-$var wire 1 3 w_WIRE_7 $end
-$var wire 1 4 w_WIRE_8 $end
-$var wire 1 5 w_WIRE_9 $end
+$var wire 2 & i_a [1:0] $end
+$var wire 2 ' i_b [1:0] $end
+$var wire 1 % i_carry $end
+$var wire 1 " o_carry $end
+$var wire 1 ( w_WIRE_0 $end
+$var wire 1 ) w_WIRE_1 $end
+$var wire 1 * w_WIRE_10 $end
+$var wire 1 + w_WIRE_11 $end
+$var wire 1 , w_WIRE_12 $end
+$var wire 1 - w_WIRE_2 $end
+$var wire 1 . w_WIRE_3 $end
+$var wire 1 / w_WIRE_4 $end
+$var wire 1 0 w_WIRE_5 $end
+$var wire 1 1 w_WIRE_6 $end
+$var wire 1 2 w_WIRE_7 $end
+$var wire 1 3 w_WIRE_8 $end
+$var wire 1 4 w_WIRE_9 $end
+$var wire 2 5 o_sum [1:0] $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
-x5
+bx 5
 x4
 x3
 x2
@@ -57,92 +51,102 @@ x+
 x*
 x)
 x(
-x'
-x&
+bx '
+bx &
 x%
-x$
-x#
+bx $
+bx #
 x"
-x!
+bx !
 $end
 #12
-0#
-1"
-0,
-1!
-01
+0"
 0+
-04
-1)
-1.
 00
-0/
-13
-05
-1*
-12
-0-
-0(
-1'
-0&
-0%
-1$
-#24
+0*
+1)
+0.
 11
-1+
-1"
-1/
-15
-0!
-0*
-02
-1%
-0$
-#36
-1#
-0"
-1,
-1*
 12
-1$
-#48
-1"
-0*
-1-
-1&
-#60
-0"
-0)
-10
-14
-1*
-0-
-0/
-05
-0!
-1(
-0&
-0%
-#72
-0#
-1"
+04
 0,
-1/
-15
-1!
-0*
-02
-1%
-0$
-#84
-1#
-0"
-1,
-1*
-12
-1$
-#96
-1"
-0*
+b11 !
+b11 5
+1(
 1-
-1&
+0/
+03
+0%
+b1 $
+b1 '
+b10 #
+b10 &
+#24
+10
+1*
+0)
+1.
+01
+14
+b10 !
+b10 5
+b1 #
+b1 &
+#36
+1"
+b0 !
+b0 5
+1+
+1)
+11
+b11 #
+b11 &
+#48
+b10 !
+b10 5
+0)
+1,
+b11 $
+b11 '
+#60
+b0 !
+b0 5
+1)
+0,
+0.
+04
+0(
+1/
+13
+1%
+b1 $
+b1 '
+b10 #
+b10 &
+#72
+0"
+0+
+0)
+1.
+01
+14
+b11 !
+b11 5
+b1 #
+b1 &
+#84
+1"
+b1 !
+b1 5
+1+
+1)
+11
+b11 #
+b11 &
+#96
+b11 !
+b11 5
+0)
+1,
+b11 $
+b11 '
